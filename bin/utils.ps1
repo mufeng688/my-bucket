@@ -65,14 +65,14 @@ try {
         if ($ScoopConfig.'abgox-abyss-bucket-name' -ne $bucket) {
             scoop config 'abgox-abyss-bucket-name' $bucket
         }
-        if ($bucket -ne 'abyss') {
-            if ($ShowCN) {
-                Write-Host "你应该使用 abyss 作为 bucket 名称，但是目前使用的名称是 $bucket`n当安装的应用存在 depends 时，它可能出现问题，建议尽快修改" -ForegroundColor Red
-            }
-            else {
-                Write-Host "You should only use 'abyss' as the bucket name, but the current name is $bucket`nWhen installing applications with depends, it may cause problems, and modify it as soon as possible." -ForegroundColor Red
-            }
-        }
+        # if ($bucket -ne 'abyss') {
+        #     if ($ShowCN) {
+        #         Write-Host "你应该使用 abyss 作为 bucket 名称，但是目前使用的名称是 $bucket`n当安装的应用存在 depends 时，它可能出现问题，建议尽快修改" -ForegroundColor Red
+        #     }
+        #     else {
+        #         Write-Host "You should only use 'abyss' as the bucket name, but the current name is $bucket`nWhen installing applications with depends, it may cause problems, and modify it as soon as possible." -ForegroundColor Red
+        #     }
+        # }
     }
 }
 catch {}
